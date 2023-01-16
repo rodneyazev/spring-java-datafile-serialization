@@ -13,13 +13,13 @@ public class DataICSerializationApp {
 		DataICSerialization icFile = new DataICSerialization();
 		Wini winiFile = icFile.getFile("datafileserialization.ini");
 		
-		icFile.write(winiFile, "Database", "Java", "Java Runtime Environment");
+		icFile.write(winiFile, "Language", "Java", "Java Runtime Environment");
 		icFile.write(winiFile, "Database", "Version", "1.8");
 		
 		icFile.write(winiFile, "Kindred", "Function", "Jungle");
 		icFile.write(winiFile, "Kindred", "Release", "2015");
 		
-		icFile.read(winiFile, "Database", "C++");		
+		icFile.read(winiFile, "Language", "C++");		
 		icFile.read(winiFile, "Kindred", "Function");
 		icFile.read(winiFile, "Kindred", "Release");
 		

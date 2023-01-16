@@ -27,12 +27,16 @@ public class DataICSerialization {
 	
 	public void read(Wini winifile, String section, String key) {
 		if (winifile.get(section,key,String.class) == null ) {
-			System.out.println("Data not found:\n" + "Section: " + section + "\nKey: " + key + "\n");
+			System.out.println("The following data weere not found:");
+			System.out.println("[" + section + "]");
+			System.out.println(section + ": " + key + "\n");
 		} else {
-			System.out.println("Data found successfully:\n" + section + "\n" + key + " = " + winifile.get(section, key) + "\n");
+			System.out.println("Data found successfully:");
+			System.out.println("[" + section + "]");
+			System.out.println(key + ": " + winifile.get(section, key) + "\n");
 		}
 	}
-
+	
 	public void delete(Wini winifile, String section) {
 		try {
 			winifile.remove(section);
